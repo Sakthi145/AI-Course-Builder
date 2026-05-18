@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-b80s0p!&nu0c-(3*s_r%ew&vmj4_5mi^4ma3d=$l1vo1z91uax
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["ai-course-builder-9qgo.onrender.com",]
 
 
 # Application definition
@@ -133,7 +133,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ai-course-builder-dstsb5lu3-sakthi145s-projects.vercel.app",
+    "https://ai-course-builder-rouge.vercel.app",
 ]
 
 REST_FRAMEWORK = {

@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
 
 from dotenv import load_dotenv
 import os
@@ -143,3 +145,8 @@ REST_FRAMEWORK = {
 }
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+}

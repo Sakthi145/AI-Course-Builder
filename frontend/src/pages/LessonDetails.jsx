@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 
+import ReactMarkdown from 'react-markdown'
+
+import remarkGfm from 'remark-gfm'
+
 import api from '../services/api'
 
 function LessonDetails() {
@@ -347,15 +351,21 @@ const handleSubmitQuiz = async () => {
           `}
         >
 
-          <p className="leading-8 text-gray-700 whitespace-pre-wrap">
-
-            {
-              lesson.content
-                ? lesson.content
-                : 'Lesson content not generated yet.'
-            }
-
-          </p>
+          {
+            lesson.content
+              ? (
+                <div className="prose prose-gray max-w-none prose-headings:font-bold prose-p:leading-8 prose-p:text-gray-700">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {lesson.content}
+                  </ReactMarkdown>
+                </div>
+              )
+              : (
+                <p className="leading-8 text-gray-700">
+                  Lesson content not generated yet.
+                </p>
+              )
+          }
 
         </div>
 
@@ -726,9 +736,13 @@ const handleSubmitQuiz = async () => {
 
       <div>
 
-        <div className="bg-gray-100 p-6 rounded-xl whitespace-pre-wrap leading-8 text-gray-700 max-h-[600px] overflow-y-auto">
+        <div className="bg-gray-100 p-6 rounded-xl max-h-[600px] overflow-y-auto">
 
-          {note.content}
+          <div className="prose prose-gray max-w-none prose-p:leading-8 prose-p:text-gray-700">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {note.content}
+            </ReactMarkdown>
+          </div>
 
         </div>
 

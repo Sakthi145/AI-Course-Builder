@@ -34,7 +34,7 @@ The project is split into two independently deployed services: a **React (Vite) 
 </tr>
 
 <tr>
-<td><img src="screenshots/03-Dashboard.png" width="450"></td>
+<td><img src="screenshots/03-dashboard.png" width="450"></td>
 <td><img src="screenshots/04-Create_Course_Form(before).png" width="450"></td>
 </tr>
 

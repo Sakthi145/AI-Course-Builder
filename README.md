@@ -23,7 +23,7 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## Application Screenshots
+## 🖼️Screenshots
 
 <h2>📸 Application Screenshots</h2>
 

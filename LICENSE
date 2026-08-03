@@ -1,0 +1,32 @@
+Educational Use License
+
+Copyright (c) 2026 S. Sakthi
+
+This project was created for educational and portfolio purposes.
+
+Permission is granted to any person obtaining a copy of this software and
+associated documentation files (the "Software") to view, study, and learn
+from the Software, and to use it for personal, academic, and non-commercial
+educational purposes, subject to the following conditions:
+
+1. This project may be freely used as a learning resource, including
+   studying its source code, architecture, and implementation.
+
+2. Any substantial reuse, redistribution, or adaptation of this Software
+   for commercial purposes requires prior written permission from the
+   author.
+
+3. Proper attribution to the original author (S. Sakthi) must be given
+   in any derivative work, tutorial, or publication that references or
+   reuses a substantial portion of this Software.
+
+4. This Software is provided "AS IS", without warranty of any kind,
+   express or implied, including but not limited to the warranties of
+   merchantability, fitness for a particular purpose, and
+   non-infringement. In no event shall the author be liable for any
+   claim, damages, or other liability arising from, out of, or in
+   connection with the Software or its use.
+
+This project may include integrations with third-party services
+(e.g., Google Gemini API) that are subject to their own separate terms
+of service.

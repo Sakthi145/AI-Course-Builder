@@ -9,13 +9,13 @@
 
 A full-stack web app that turns a course idea into a complete, structured course — using **Google Gemini** to generate a syllabus, lesson content, and quizzes automatically, with a **React** frontend and a **Django REST** backend.
 
-**🔗 Live App:** [ai-course-builder-rouge.vercel.app](https://ai-course-builder-rouge.vercel.app/login)
+**Live App:** [ai-course-builder-rouge.vercel.app](https://ai-course-builder-rouge.vercel.app/login)
 
 > **Note:** The backend currently uses SQLite on Render's free tier. If the backend has been redeployed, existing accounts may no longer be available. Simply create a new account to continue exploring the application.
 
 ---
 
-## 📖 Project Overview
+## Project Overview
 
 AI Course Builder lets a user describe a course they want (title, skill level, duration, topics) and generates a full course structure — modules, lessons, and quizzes — using Google's Gemini API. Once generated, users can browse their course, read AI-written lesson content (rendered as clean, formatted Markdown), take auto-graded quizzes, save personal notes per lesson, and track progress. Authentication is handled via JWT, with a dedicated signup/login flow.
 
@@ -23,9 +23,9 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## 🖼️Screenshots
+## Screenshots
 
-<h2>📸 Application Screenshots</h2>
+<h2>Application Screenshots</h2>
 
 <table>
 <tr>
@@ -81,7 +81,7 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## ⭐ Key Highlights
+## Key Highlights
 
 - AI-generated course syllabus, lesson content, and quizzes (Google Gemini)
 - Clean Markdown rendering for AI-generated content (headings, bold text, lists, tables)
@@ -92,20 +92,20 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 **Authentication** — JWT-based signup/login, protected routes on the frontend
-- 🧠 **AI Syllabus Generation** — describe a course (title, level, duration, topics) and Gemini generates a full modules → lessons structure
-- 📄 **AI Lesson Content Generation** — generates detailed lesson content on demand, rendered as clean formatted Markdown (not raw text)
-- ❓ **AI Quiz Generation** — auto-generates multiple-choice quizzes per lesson, with explanations
-- ✅ **Quiz Attempts & Scoring** — take a quiz, get scored automatically, retake anytime
-- 📝 **Lesson Notes** — save, edit, and delete personal notes per lesson, rendered as Markdown
-- 📊 **Dashboard** — view all created courses with stats
-- 🎨 **Responsive UI** — built with Tailwind CSS v4
+- **Authentication** — JWT-based signup/login, protected routes on the frontend
+- **AI Syllabus Generation** — describe a course (title, level, duration, topics) and Gemini generates a full modules → lessons structure
+- **AI Lesson Content Generation** — generates detailed lesson content on demand, rendered as clean formatted Markdown (not raw text)
+- **AI Quiz Generation** — auto-generates multiple-choice quizzes per lesson, with explanations
+- **Quiz Attempts & Scoring** — take a quiz, get scored automatically, retake anytime
+- **Lesson Notes** — save, edit, and delete personal notes per lesson, rendered as Markdown
+- **Dashboard** — view all created courses with stats
+- **Responsive UI** — built with Tailwind CSS v4
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 | Layer | Technology |
@@ -130,7 +130,7 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────┐         HTTPS / JSON          ┌──────────────────────┐
@@ -152,7 +152,7 @@ The project is split into two independently deployed services: a **React (Vite) 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AI-Course-Builder/
@@ -181,7 +181,7 @@ AI-Course-Builder/
 
 ---
 
-## 🗄️ Data Model
+## Data Model
 
 | Model | Key Fields | Relationships |
 |---|---|---|
@@ -195,11 +195,11 @@ AI-Course-Builder/
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 Base path: **`/api`**
 
-### 🔑 Authentication — `/api/users`
+### Authentication — `/api/users`
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
 | POST | `/users/signup/` | Public | Register a new user |
@@ -207,7 +207,7 @@ Base path: **`/api`**
 | POST | `/users/refresh/` | Public | Refresh an expired access token |
 | GET | `/users/profile/` | Authenticated | Get current user info |
 
-### 📚 Courses — `/api`
+### Courses — `/api`
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
 | GET / POST | `/courses/` | Authenticated | List user's courses / create a new one |
@@ -217,7 +217,7 @@ Base path: **`/api`**
 | PUT / DELETE | `/notes/<note_id>/` | Authenticated | Update or delete a note |
 | GET / POST / DELETE | `/lessons/<lesson_id>/quiz-attempt/` | Authenticated | Get, submit, or retake a quiz attempt |
 
-### 🤖 AI Generation — `/api/ai`
+### AI Generation — `/api/ai`
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
 | POST | `/ai/generate-syllabus/` | Authenticated | Generate a full course structure (modules + lessons) from a title/level/duration/topics |
@@ -227,7 +227,7 @@ Base path: **`/api`**
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 - JWT-based, via `djangorestframework-simplejwt`.
 - On login, the backend returns an **access token** and a **refresh token**; the frontend stores these in `localStorage`.
@@ -237,7 +237,7 @@ Base path: **`/api`**
 
 ---
 
-## ⚙️ Installation & Setup (Local Development)
+## Installation & Setup (Local Development)
 
 ### Prerequisites
 - Python 3.11+
@@ -279,7 +279,7 @@ The frontend automatically points to `http://127.0.0.1:8000/api` in development 
 
 ---
 
-## 🔧 Environment Variables
+## Environment Variables
 
 ### Backend (`backend/.env`) — not committed to the repo
 ```env
@@ -313,7 +313,7 @@ Vite automatically loads the right file based on whether you run `npm run dev` (
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 | Service | Platform | URL |
 |---|---|---|
@@ -323,7 +323,7 @@ Vite automatically loads the right file based on whether you run `npm run dev` (
 - **Frontend** deploys automatically to Vercel on every push to `main` (Vite build output).
 - **Backend** deploys automatically to Render on every push to `main`, running via Gunicorn (`Procfile`: `web: gunicorn core.wsgi`).
 
-### ⚠️ Known limitation — database persistence
+### Known limitation — database persistence
 
 The backend currently uses **SQLite**, and Render's free tier has an **ephemeral filesystem** — every backend redeploy resets the database, which means all users, courses, and lesson data are wiped. This is a known limitation of the current (v1) deployment setup, not a bug in the application logic.
 
@@ -331,7 +331,7 @@ The backend currently uses **SQLite**, and Render's free tier has an **ephemeral
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - [ ] Migrate from SQLite to PostgreSQL for persistent production data
 - [ ] Add automated tests (currently only scaffolded, no test coverage)
@@ -344,15 +344,15 @@ The backend currently uses **SQLite**, and Render's free tier has an **ephemeral
 
 ---
 
-## 📄 License
+## License
 
 This project is distributed under the **Educational and Portfolio License**. See the `LICENSE` file for details.
 ---
 
-## ✍️ Author
+## Author
 
 **S. Sakthi**
-🔗 GitHub: [https://github.com/Sakthi145](https://github.com/Sakthi145)
+GitHub: [https://github.com/Sakthi145](https://github.com/Sakthi145)
 
 ---
 

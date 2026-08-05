@@ -1,4 +1,4 @@
-# 🎓 AI Course Builder
+# AI Course Builder
 
 ![React](https://img.shields.io/badge/React-19-blue)
 ![Django](https://img.shields.io/badge/Django-6.0-green)

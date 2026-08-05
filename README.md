@@ -333,14 +333,14 @@ The backend currently uses **SQLite**, and Render's free tier has an **ephemeral
 
 ## Future Improvements
 
-- [ ] Migrate from SQLite to PostgreSQL for persistent production data
-- [ ] Add automated tests (currently only scaffolded, no test coverage)
-- [ ] Course progress tracking (% complete per course)
-- [ ] Export course/lesson content to PDF
-- [ ] Rich text editor for manually editing AI-generated lesson content
-- [ ] Replace `alert()`/`console.log` error handling with a proper toast notification system
-- [ ] Public course sharing (share a generated course via link)
-- [ ] Dark mode
+- Migrate from SQLite to PostgreSQL for persistent production data
+- Add automated tests (currently only scaffolded, no test coverage)
+- Course progress tracking (% complete per course)
+- Export course/lesson content to PDF
+- Rich text editor for manually editing AI-generated lesson content
+- Replace `alert()`/`console.log` error handling with a proper toast notification system
+- Public course sharing (share a generated course via link)
+- Dark mode
 
 ---
 
